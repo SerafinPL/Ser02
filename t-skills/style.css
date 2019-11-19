@@ -1,0 +1,330 @@
+/* CSS files add styling rules to your content */
+
+body {
+  
+  min-width: 1000px;
+  height: 100%;
+  overflow:auto;
+  margin: 0;
+}
+
+html{height: 100%;}
+
+* {box-sizing: border-box;}
+
+
+
+/*--- HEADER ---*/
+
+header {
+  width:100%;
+  display: block;
+  height:100px;
+
+
+
+}
+
+header h1 {
+
+  margin:0;
+  padding: 1em;
+  font-style: bold;
+  color: #006622;
+
+  text-align: center;
+}
+
+/*--- MAIN ---*/
+main{
+  /*padding-top: 100px;*/
+}
+
+/*--- NAV ---*/
+
+nav {
+  width:25%;
+
+  float: left;
+  overflow-y: auto;
+
+}
+
+nav ul {
+  list-style-type: none;
+  width:100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul > li {
+  color: #006622;
+  text-align: center;
+  font-size: 1.5em;
+  padding: 0.2em;
+}
+
+
+nav li {
+  margin: 0;
+  padding: 1em 0 1em 0.5em;
+  width:100%;
+  display: block;
+  height: 100%;
+
+}
+
+nav a li:hover {
+  background-color: #006622;
+  color: #80ffaa;
+
+}
+
+
+
+
+nav a, nav a:visited{
+  text-decoration: none;
+  color: #006622;
+}
+
+
+/*--- SECTION ---*/
+
+section {
+  width: 71%;
+  padding: 1em 2em;
+  margin: 1% 2%;
+  float: left;
+  background-color:#333;
+
+}
+
+/*--- INDEX ---*/
+
+.thumbnail{
+  width:100%;
+  height: auto;
+}
+
+.sec{
+  overflow-X:auto;
+  height:600px;
+}
+
+
+/*--- MODAL ---*/
+
+.mini-img{
+  width: 23%;
+  height: auto;
+
+  padding:1%;
+
+}
+
+/* Modal DIV */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  height: auto;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* The Close Button */
+#close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#close:hover,
+#close:focus,
+#l_arr:hover,
+#l_arr:focus,
+#r_arr:hover,
+#r_arr:focus{
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* The Arrow button*/
+#l_arr {
+  position: absolute;
+  left:5%;
+  top:300px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#r_arr {
+  position: absolute;
+  right:5%;
+  top:300px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* Add Animation */
+.modal-content, #caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 1s;
+  animation-name: zoom;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)}
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+
+/* FLIP */
+
+.flip-box, .flip-box2, .flip-box3, .flip-box4 {
+  background-color: transparent;
+  border: 1px solid yellow;
+  width: 300px;
+  height:200px;
+  perspective: 1000px;
+  float: left;
+  margin: 15px;
+  }
+
+.flip-box-inner{
+  position: relative;
+  width:100%;
+  height:100%;
+  text-algin: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+
+}
+
+.flip-box:hover .flip-box-inner {
+   transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-end, .flip-box-end2 {
+  position: absolute;
+  width:100%;
+  height:100%;
+  backface-visibility: hidden;
+
+}
+
+.flip-box-front{
+  background-color: #bbb;
+  color: black;
+  background-image: url("https://cdn.glitch.com/81cecaf6-e36c-4d21-93ee-3180874df765%2F16300.jpg?v=1571840957683");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.flip-box-end{
+  background-color: blue;
+  color: white;
+  transform: rotateY(180deg);
+  background-image: url("https://cdn.glitch.com/81cecaf6-e36c-4d21-93ee-3180874df765%2Flandscapes%20nature%20trees%20roads%20parks%20peaceful%201920x1200%20wallpaper_www.wallpapername.com_13.jpg?v=1571840956823");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.flip-box2:hover .flip-box-inner {
+   transform: rotateX(180deg);
+}
+
+.flip-box-end2{
+  background-color: blue;
+  color: white;
+  transform: rotateX(180deg);
+  background-image: url("https://cdn.glitch.com/81cecaf6-e36c-4d21-93ee-3180874df765%2FBeautiful-Canada-Nature-Scenery-Wallpaper-4972.jpg?v=1571840957345");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.flip-box3:hover .flip-box-inner2 {
+
+    transform: rotateZ(360deg);
+}
+
+.flip-box-inner2{
+  position: relative;
+  width:100%;
+  height:100%;
+  text-algin: center;
+  transition: transform 2s;
+  transform-style: preserve-3d;
+
+}
+
+.flip-box4:hover .flip-box-inner {
+
+    transform: scale(2,2);
+}
+
+
+/*--- ParallaX CSS---*/
+
+.parallax {
+
+
+  /* Full height */
+  width:100%;
+  height: 200px;
+
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.z1{background-image: url('https://cdn.glitch.com/81cecaf6-e36c-4d21-93ee-3180874df765%2F804207.jpg?v=1571840956278');}
+
+.z2{background-image: url('https://cdn.glitch.com/81cecaf6-e36c-4d21-93ee-3180874df765%2FBeautiful-Canada-Nature-Scenery-Wallpaper-4972.jpg?v=1571840957345');}
+
+.z3{background-image: url('https://cdn.glitch.com/81cecaf6-e36c-4d21-93ee-3180874df765%2Flandscape-wallpapers-27931-9892581.jpg?v=1571840954903');}
+
+.z4{background-image: url('https://cdn.glitch.com/81cecaf6-e36c-4d21-93ee-3180874df765%2F16300.jpg?v=1571840957683');}
+
+.z5{background-image: url('https://cdn.glitch.com/81cecaf6-e36c-4d21-93ee-3180874df765%2Foriginal.jpg?v=1571840955618');}
