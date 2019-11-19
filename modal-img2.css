@@ -1,0 +1,48 @@
+
+#kursor {
+	border-bottom: 5px solid white;
+	border-left: 5px solid white;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	visibility: hidden;
+	
+	transition: transform 0.5s ease-out;
+	
+}
+
+#img01 {
+	position: relative;
+	cursor:none;
+}
+
+/*
+.kursor-lewo {
+	animation-name: anim-l;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	animation-duration: 1s;
+	transform: rotate(45deg);
+}
+
+.kursor-prawo {
+	animation-name: anim-r;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	animation-duration: 1s;
+	/*transform: rotate(225deg);
+}
+
+@keyframes anim-l {
+  0%   {transform: rotate(225deg);}
+  
+  100% {transform: rotate(45deg);}
+}
+
+@keyframes anim-r {
+  0%   {transform: rotate(45deg);}
+  
+  100% {transform: rotate(225deg);}
+}
+*/
+
