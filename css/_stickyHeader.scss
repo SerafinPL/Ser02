@@ -6,6 +6,7 @@ header {
   top: 0px;
   width:100%;
   background: linear-gradient(to bottom, $kolorgl 0%, #000000 10%);
+  z-index: 2;
 
   #header-block{
     width:100%;
