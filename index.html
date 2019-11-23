@@ -11,18 +11,25 @@
 
 
       <!-- import the webpage's stylesheet -->
-      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="css/style.css">
 
 
 
   </head>
   <body>
     <header>
+      <div id="header-block">
         <h1>Web site to iprove the web skills</h1>
-      </header>
+        <div id="menuBox">
+          <i id="kres1" class="kres"></i>
+          <i id="kres2" class="kres"></i>
+          <i id="kres3" class="kres"></i>
+        </div><!-- id="menuBox" -->
+      </div><!-- id="header-block" -->
+    </header>
     <main>
 
-      <nav>
+      <nav id="navMenu" class="navOff">
         <ul>
           <li>MENU</li>
           <a href="index.html"><li>INDEX</li></a>
@@ -36,13 +43,16 @@
 
       </nav>
 
-      <section >
-        
+      <section id="secMain">
+        <h2>Witam na mojej stronie która pokazuje co potrafię stworzyć w ramach technologi web'owych</h2>
+
+        <img src="img\pieski2.jpg"></p>
       </section>
 
     </main>
 
-    <!-- import the webpage's javascript file -->
-    <script src="script.js" ></script>
+    <!-- import the webpage's javascript file
+    <script src="script.js" ></script>-->
+    <script src="js/menu-script.js" ></script>
   </body>
 </html>

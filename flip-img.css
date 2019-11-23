@@ -1,0 +1,83 @@
+/* FLIP */
+
+.flip-box, .flip-box2, .flip-box3, .flip-box4 {
+  background-color: transparent;
+  border: 1px solid yellow;
+  width: 300px;
+  height:200px;
+  perspective: 1000px;
+  float: left;
+  margin: 15px;
+  }
+
+.flip-box-inner{
+  position: relative;
+  width:100%;
+  height:100%;
+  text-algin: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+
+}
+
+.flip-box:hover .flip-box-inner {
+   transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-end, .flip-box-end2 {
+  position: absolute;
+  width:100%;
+  height:100%;
+  backface-visibility: hidden;
+
+}
+
+.flip-box-front{
+  background-color: #bbb;
+  color: black;
+  background-image: url("https://cdn.glitch.com/81cecaf6-e36c-4d21-93ee-3180874df765%2F16300.jpg?v=1571840957683");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.flip-box-end{
+  background-color: blue;
+  color: white;
+  transform: rotateY(180deg);
+  background-image: url("https://cdn.glitch.com/81cecaf6-e36c-4d21-93ee-3180874df765%2Flandscapes%20nature%20trees%20roads%20parks%20peaceful%201920x1200%20wallpaper_www.wallpapername.com_13.jpg?v=1571840956823");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.flip-box2:hover .flip-box-inner {
+   transform: rotateX(180deg);
+}
+
+.flip-box-end2{
+  background-color: blue;
+  color: white;
+  transform: rotateX(180deg);
+  background-image: url("https://cdn.glitch.com/81cecaf6-e36c-4d21-93ee-3180874df765%2FBeautiful-Canada-Nature-Scenery-Wallpaper-4972.jpg?v=1571840957345");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.flip-box3:hover .flip-box-inner2 {
+
+    transform: rotateZ(360deg);
+}
+
+.flip-box-inner2{
+  position: relative;
+  width:100%;
+  height:100%;
+  text-algin: center;
+  transition: transform 2s;
+  transform-style: preserve-3d;
+
+}
+
+.flip-box4:hover .flip-box-inner {
+
+    transform: scale(2,2);
+}
