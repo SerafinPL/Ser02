@@ -1,0 +1,177 @@
+
+/*--- HEADER ---*/
+
+header {
+  position: fixed;
+  top: 0px;
+  width:100%;
+  background: linear-gradient(to bottom, $kolorgl 0%, #000000 10%);
+
+  #header-block{
+    width:100%;
+    height:50px;
+    display: block;
+    position: relative;
+
+  }
+
+  h1 {
+
+  margin:0px;
+  padding: 10px;
+  padding-right: 50px;
+  font-style: bold;
+  color: $kolorgl; /* Zielony */
+  width:90%;
+  height:50px;
+  display: block;
+  float: left;
+  text-align: center;
+  position: static;
+
+  }
+
+  #menuBox{
+    position: relative;
+    display: block;
+    float: right;
+    width: 10%;
+    max-width: 50px;
+    height:50px;
+    top:0px;
+    right:  0px;
+    cursor: pointer;
+    margin-right: 10px;
+
+  }
+
+  .kres {
+    position: absolute;
+    border-top: 2px solid $kolorgl;
+    width: 50px;
+    height: 1px;
+
+  }
+  #kres1{
+    top: 15px;
+    right: 0px;
+
+  }
+  #kres2{
+    top: 25px;
+    right: 0px;
+  }
+  #kres3{
+    top: 35px;
+    right: 0px;
+  }
+
+
+
+
+    @mixin kresAni($nameAni)
+     {
+      -webkit: { /* Safari 4.0 - 8.0 */
+        animation: $nameAni 500ms infinite;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+      }
+
+      animation: $nameAni 500ms infinite;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+
+    .kres1ANON{@include kresAni(kres1ON)}
+    .kres1ANOFF {@include kresAni(kres1OFF)}
+    .kres2ANON{@include kresAni(kres2ON)}
+    .kres2ANOFF {@include kresAni(kres2OFF)}
+    .kres3ANON{@include kresAni(kres3ON)}
+    .kres3ANOFF {@include kresAni(kres3OFF)}
+
+
+    @mixin aniON()
+     {
+       10%   {top: 25px;}
+       50%   {transform: rotate(225deg);}
+    }
+
+    @keyframes kres1ON {
+      0%    {top: 15px; right: 0px; transform: rotate(0deg);}
+      @include aniON;
+      100%  {top: 25px; right: 0px; transform: rotate(45deg);}
+    }
+
+    @-webkit-keyframes kres1ON {
+      0%    {top: 15px; right: 0px; transform: rotate(0deg);}
+      @include aniON;
+      100%  {top: 25px; right: 0px; transform: rotate(45deg);}
+    }
+
+    @keyframes kres2ON {
+      0%    {top: 25px; right: 0px; transform: rotate(0deg);}
+      @include aniON;
+      100%  {top: 25px; right: 0px; transform: rotate(45deg);}
+    }
+
+    @-webkit-keyframes kres2ON {
+      0%    {top: 15px; right: 0px; transform: rotate(0deg);}
+      @include aniON;
+      100%  {top: 25px; right: 0px; transform: rotate(45deg);}
+    }
+
+    @keyframes kres3ON {
+      0%    {top: 35px; right: 0px; transform: rotate(0deg);}
+      @include aniON;
+      100%  {top: 25px; right: 0px; transform: rotate(-45deg);}
+    }
+
+    @-webkit-keyframes kres3ON {
+      0%    {top: 35px; right: 0px; transform: rotate(0deg);}
+      @include aniON;
+      100%  {top: 25px; right: 0px; transform: rotate(-45deg);}
+    }
+
+    @mixin aniOFF() {
+      50%   {transform: rotate(225deg);}
+      90%   {top: 15px;}
+    }
+
+    @keyframes kres1OFF {
+      0%  {top: 25px; right: 0px; transform: rotate(45deg);}
+      @include aniOFF;
+      100%    {top: 15px; right: 0px; transform: rotate(0deg);}
+    }
+
+    @-webkit-keyframes kres1OFF {
+      0%  {top: 25px; right: 0px; transform: rotate(45deg);}
+      @include aniOFF;
+      100%    {top: 15px; right: 0px; transform: rotate(0deg);}
+    }
+
+    @keyframes kres2OFF {
+      0%  {top: 25px; right: 0px; transform: rotate(45deg);}
+      @include aniOFF;
+      100%    {top: 25px; right: 0px; transform: rotate(0deg);}
+    }
+
+    @-webkit-keyframes kres2OFF {
+      0%  {top: 25px; right: 0px; transform: rotate(45deg);}
+      @include aniOFF;
+      100%    {top: 25px; right: 0px; transform: rotate(0deg);}
+    }
+
+    @keyframes kres3OFF {
+      0%  {top: 25px; right: 0px; transform: rotate(-45deg);}
+      @include aniOFF;
+      100%    {top: 35px; right: 0px; transform: rotate(0deg);}
+    }
+
+    @-webkit-keyframes kres3OFF {
+      0%  {top: 25px; right: 0px; transform: rotate(-45deg);}
+      @include aniOFF;
+      100%    {top: 35px; right: 0px; transform: rotate(0deg);}
+    }
+
+
+}

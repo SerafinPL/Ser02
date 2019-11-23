@@ -1,0 +1,26 @@
+/*--- ParallaX CSS---*/
+
+.parallax {
+
+
+  /* Full height */
+  width:100%;
+  height: 200px;
+
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.z1{background-image: url('https://cdn.glitch.com/81cecaf6-e36c-4d21-93ee-3180874df765%2F804207.jpg?v=1571840956278');}
+
+.z2{background-image: url('https://cdn.glitch.com/81cecaf6-e36c-4d21-93ee-3180874df765%2FBeautiful-Canada-Nature-Scenery-Wallpaper-4972.jpg?v=1571840957345');}
+
+.z3{background-image: url('https://cdn.glitch.com/81cecaf6-e36c-4d21-93ee-3180874df765%2Flandscape-wallpapers-27931-9892581.jpg?v=1571840954903');}
+
+.z4{background-image: url('https://cdn.glitch.com/81cecaf6-e36c-4d21-93ee-3180874df765%2F16300.jpg?v=1571840957683');}
+
+.z5{background-image: url('https://cdn.glitch.com/81cecaf6-e36c-4d21-93ee-3180874df765%2Foriginal.jpg?v=1571840955618');}

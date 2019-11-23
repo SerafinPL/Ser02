@@ -1,2 +1,52 @@
+@import "vari";             /* ZMIENNE */
+@import "reset";            /* RESET */
+@import "stickyHeader";     /* HEADER */
+@import "nav-left";         /* NAV */
 
-@import "reset";
+
+
+/* CSS files add styling rules to your content */
+body {
+  background-color: #000;
+}
+
+
+
+
+/*--- MAIN ---*/
+
+
+main{
+  padding-top: 50px;
+
+}
+
+
+/*--- SECTION ---*/
+
+section {
+  width: 100%;
+  padding: 1em 2em;
+  margin: 1% 0%;
+  float: right;
+  background-color:#333;
+  transition: width 50ms ;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+/*--- INDEX ---*/
+
+.thumbnail{
+  width:100%;
+  height: auto;
+}
+
+.sec{
+  overflow-X:auto;
+  height:600px;
+}
