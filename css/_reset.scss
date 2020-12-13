@@ -11,3 +11,9 @@ body {
   overflow:auto;
   margin: 0;
 }
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
